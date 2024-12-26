@@ -8,6 +8,7 @@ public class IplApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(IplApplication.class, args);
+		System.out.println("app start");
 	}
 
 }
