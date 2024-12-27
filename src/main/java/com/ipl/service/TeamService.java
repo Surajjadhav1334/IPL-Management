@@ -16,8 +16,8 @@ public class TeamService {
 	@Autowired
 	private Teamdao teamdao;
 
-	public String addteam(Team team) {
-		String msg = teamdao.addteam(team);
+	public String addteam(Team team, int id) {
+		String msg = teamdao.addTeam(team, id);
 
 		return msg;
 

@@ -21,9 +21,9 @@ public class TeamController {
 	@Autowired
 	TeamService teamService;
 
-	@PostMapping("api/teams")
-	public String addteam(@RequestBody Team team) {
-		String msg = teamService.addteam(team);
+	@PostMapping("api/teams/{id}")
+	public String addteam(@RequestBody Team team, @PathVariable("id") int id) {
+		String msg = teamService.addteam(team, id);
 		System.out.println(team);
 		return msg;
 	}

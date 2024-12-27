@@ -18,11 +18,14 @@ public class Teamdao {
 		teams.add(new Team(2, "RCB", "Banglore", "Victory"));
 	}
 
-	public String addteam(Team team) {
-		teams.add(team);
-
-		return "added";
-
+	public String addTeam(Team team, int id) {
+	    for (Team existingTeam : teams) {
+	        if (existingTeam.getTeamId() == id) {
+	            return "Team already exists.";
+	        }
+	    }
+	    teams.add(team);
+	    return "Added successfully.";
 	}
 
 	public List<Team> allteam() {
